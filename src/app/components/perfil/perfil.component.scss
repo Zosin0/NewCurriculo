@@ -1,0 +1,59 @@
+.perfil {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.titulo {
+    text-align: left;
+}
+
+.texto {
+    color: white;
+    width: clamp(12%, 45%, 50%);
+    text-align: justify;
+}
+
+.container{display: inline-block;}
+
+.text{
+    color: rgb(255, 255, 0);
+    padding-top: 1%;
+    font-size: 26px;
+    border-right: 6px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s, 
+        cursor .4s step-end infinite alternate;        
+}
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+@keyframes typing {
+    from { width: 0 }
+}
+
+.social {
+    display: flex;
+    width: 40%;
+    padding-top: 1%;
+    margin-left: 9.5%;
+    margin-bottom: 10%;
+}
+.link-menu > a{
+    color: var(--cor-secundaria);
+}
+.social img {
+    margin-inline: auto;
+    width: 50px;
+}
+
+.link-menu > a:hover{
+    color: var(--cor-hover);
+}
+
+.social-imagens:hover{
+    background-color: blue;
+    border-radius: 10px;
+}

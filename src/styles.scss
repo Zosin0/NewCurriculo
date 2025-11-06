@@ -3,6 +3,7 @@
 :root {
     --cor-primaria: #FFF;
     --cor-secundaria: #FFFF00;
+    --cor-hover: blue;
 }
 
 * {
@@ -15,7 +16,7 @@ p {
 }
 
 body {
-  background-image: url('./app/assets/fundo.jpg');
+  background-image: url('/assets/fundo.jpg');
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   background-size: cover;
