@@ -1,0 +1,40 @@
+.bar{
+    background-image: linear-gradient(rgb(248, 248, 79), orange);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1vh;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--cor-primaria);
+    height: 3vh;
+    top: 0;
+    padding-top: 1%;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: space-between;
+}
+
+.topnavi{
+    color: yellow;
+}
+
+.item-link-nav{
+    list-style-type: none;
+}
+
+.item-link-nav a {
+    color: yellow;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.item-link-nav:hover a{
+    text-decoration: underline;
+}

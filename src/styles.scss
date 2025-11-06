@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #FFF;
+    --cor-secundaria: #FFFF00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--cor-primaria);
+}
+
+body {
+  background-image: url('./app/assets/fundo.jpg');
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background-size: cover;
+  font-style: normal;
+  font-weight: 300;
+  height: 100%;
+}
