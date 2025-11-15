@@ -1,40 +1,96 @@
-.bar{
-    background-image: linear-gradient(rgb(248, 248, 79), orange);
+:host {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 1vh;
+    z-index: 1000;
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bar {
+    background-image: linear-gradient(to right, rgb(248, 248, 79), orange);
+    height: 5px;
 }
 
 .navbar {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: var(--cor-primaria);
-    height: 3vh;
-    top: 0;
-    padding-top: 1%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
 }
 
-.nav-links{
+.navbar-logo img {
+    width: 60px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: space-between;
+    align-items: center;
 }
 
-.topnavi{
-    color: yellow;
+.nav-links li {
+    margin-left: 2rem;
 }
 
-.item-link-nav{
-    list-style-type: none;
-}
-
-.item-link-nav a {
+.nav-links a {
     color: yellow;
     text-decoration: none;
+    font-size: 1rem;
     padding: 0.5rem;
+    transition: color 0.3s ease;
 }
 
-.item-link-nav:hover a{
-    text-decoration: underline;
+.nav-links a:hover {
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        background-color: transparent;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
 }

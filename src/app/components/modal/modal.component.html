@@ -1,0 +1,17 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+    
+    <h2>{{ project.title }}</h2>
+    
+    <div class="slideshow-container">
+      <button class="prev" (click)="prevImage()">&#10094;</button>
+      <img [src]="project.slideshowImages[currentImageIndex]" alt="{{ project.title }} screenshot" class="slideshow-image">
+      <button class="next" (click)="nextImage()">&#10095;</button>
+    </div>
+    
+    <a [href]="project.projectUrl" target="_blank" class="btn-view-project">
+      Visitar Projeto
+    </a>
+  </div>
+</div>

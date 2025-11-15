@@ -1,12 +1,19 @@
 <div class="bar"></div>
-<nav class="navbar" id="navbar">
-    <div class="item-link-nav" id="nav-links">
-        <a><img style="width: 75px;" src="/assets/logo.png" alt="logo"></a>
-    </div>
-    <ul class="nav-links">
-        <li class="item-link-nav"><a class="topnavi" href="#sobre">Sobre Mim</a></li>
-        <li class="item-link-nav"><a class="topnavi" href="#projetos">Projetos</a></li>
-        <li class="item-link-nav"><a class="topnavi" href="#certificados">Certificações</a></li>
-        <li class="item-link-nav"><a class="topnavi" href="#habilidades">Habilidades</a></li>
+<nav class="navbar">
+    <a href="#" class="navbar-logo">
+        <img style="width: 75px;" src="/assets/logo.png" alt="logo">
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links" [ngClass]="{ 'active': isMenuOpen }">
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#certificados">Certificações</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
     </ul>
 </nav>

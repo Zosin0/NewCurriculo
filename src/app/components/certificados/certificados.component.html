@@ -1,1 +1,23 @@
-<p>certificados works!</p>
+<section id="certificados" class="certificados-container">
+    <div class="certificados-content">
+        <h1 class="titulo-certificados">Certificações e Projetos</h1>
+        <div class="certs-grid">
+            <div class="cert-card" 
+                 *ngFor="let cert of certificados"
+                 (click)="cert.type === 'project' && openModal(cert)">
+
+                <img [src]="cert.imageUrl" [alt]="cert.title" class="cert-image">
+                <div class="cert-info">
+                    <h5>{{ cert.title }}</h5>
+                    <h6>{{ cert.hours }}</h6>
+                </div>
+                
+                <div *ngIf="cert.type === 'project'" class="view-project-overlay">
+                    <p>Ver Detalhes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-modal *ngIf="isModalOpen" [project]="selectedProject" (close)="closeModal()"></app-modal>

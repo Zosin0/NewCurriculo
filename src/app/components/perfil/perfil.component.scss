@@ -1,59 +1,111 @@
-.perfil {
-    margin-top: 10%;
-    margin-left: 10%;
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 4rem; 
+    min-height: 65vh;
+}
+
+.perfil-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.image-content {
+    order: -1; 
+    margin-bottom: 2rem;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    object-fit: cover;
+}
+
+.text-content {
+    color: white;
 }
 
 .titulo {
-    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.texto {
-    color: white;
-    width: clamp(12%, 45%, 50%);
-    text-align: justify;
+.subtitle-container {
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
-.container{display: inline-block;}
-
-.text{
-    color: rgb(255, 255, 0);
-    padding-top: 1%;
-    font-size: 26px;
-    border-right: 6px solid;
-    width: 100%;
+.text {
+    color: yellow;
+    font-size: 1.5rem;
+    border-right: 4px solid yellow;
     white-space: nowrap;
     overflow: hidden;
-    animation:
-        typing 2s, 
-        cursor .4s step-end infinite alternate;        
+    animation: typing 2s steps(20, end), cursor .5s step-end infinite alternate;
 }
-@keyframes cursor {
-    50% { border-color: transparent }
-}
+
 @keyframes typing {
-    from { width: 0 }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-.social {
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+.social-links {
     display: flex;
-    width: 40%;
-    padding-top: 1%;
-    margin-left: 9.5%;
-    margin-bottom: 10%;
-}
-.link-menu > a{
-    color: var(--cor-secundaria);
-}
-.social img {
-    margin-inline: auto;
-    width: 50px;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.link-menu > a:hover{
-    color: var(--cor-hover);
+.social-icon {
+    width: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.social-imagens:hover{
-    background-color: blue;
-    border-radius: 10px;
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+@media (min-width: 768px) {
+    .perfil-content {
+        flex-direction: row;
+        text-align: left;
+        padding: 3rem 4rem;
+    }
+
+    .image-content {
+        order: 0;
+        margin-bottom: 0;
+        margin-left: 4rem;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
 }

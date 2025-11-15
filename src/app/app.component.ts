@@ -7,6 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { SobreComponent } from './components/sobre/sobre.component';
     NavComponent,
     PerfilComponent,
     ProjetosComponent,
-    SobreComponent
+    SobreComponent,
+    ModalComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

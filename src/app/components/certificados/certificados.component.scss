@@ -1,0 +1,121 @@
+.certificados-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.certificados-content {
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+}
+
+.titulo-certificados {
+    color: yellow;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 250px;
+}
+
+.cert-card[data-type="project"] {
+    cursor: pointer;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cert-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cert-info {
+    padding: 1rem;
+}
+
+.cert-info h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.cert-info h6 {
+    font-size: 0.9rem;
+    color: yellow;
+}
+
+/* Shine effect for non-project cards */
+.cert-card:not([data-type="project"])::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-30deg);
+    transition: left 0.7s ease-in-out;
+}
+
+.cert-card:not([data-type="project"]):hover::before {
+    left: 125%;
+}
+
+.view-project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-card:hover .view-project-overlay {
+    opacity: 1;
+}
+
+
+@media (min-width: 768px) {
+    .certificados-content {
+        padding: 3rem 4rem;
+    }
+
+    .titulo-certificados {
+        font-size: 2.5rem;
+    }
+}
