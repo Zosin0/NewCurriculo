@@ -79,9 +79,15 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 80px; 
+        top: 100%; 
         left: 0;
-        background-color: transparent;
+        
+        background-color: rgba(26, 26, 26, 0.95); 
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        
         padding: 1rem 0;
     }
 
@@ -90,7 +96,13 @@
     }
 
     .nav-links li {
-        margin: 1rem 0;
+        margin: 0; 
         text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 2rem;
     }
 }

@@ -71,7 +71,6 @@
     color: yellow;
 }
 
-/* Shine effect for non-project cards */
 .cert-card:not([data-type="project"])::before {
     content: '';
     position: absolute;

@@ -1,1 +1,11 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div>
+    <ul class="nav-list">
+      @for (link of footerLinks(); track link.name) {
+        <li class="link-menu">
+          <a [href]="link.url" [target]="link.external ? '_blank' : '_self'"> {{ link.name }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</footer>
