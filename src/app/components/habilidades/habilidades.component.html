@@ -1,1 +1,13 @@
-<p>habilidades works!</p>
+<section class="habilidades-container">
+  <div class="habilidades-content">
+    <h1>Habilidades</h1>
+    <div class="habilidades-grid">
+      @for (skill of skills(); track skill.name) {
+        <div class="hab-card">
+          <img class="hab-img" [src]="skill.icon" [alt]="skill.alt" />
+          <h6 class="tit-hab">{{ skill.name }}</h6>
+        </div>
+      }
+    </div>
+  </div>
+</section>
